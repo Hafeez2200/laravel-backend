@@ -16,4 +16,6 @@ Route::post('/login',[AuthController::class, 'login']);
 Route::get('/content/{lang}', [ContentController::class, 'getContent']);
 Route::get('/images', [CatAppController::class, 'getImages']);
 Route::get('/cities/{lang}', [CityController::class, 'getCities']);
+Route::middleware('auth:sanctum')->post('/change-password', [AuthController::class, 'changePassword']);
+
 
