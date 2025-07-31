@@ -17,5 +17,8 @@ Route::get('/content/{lang}', [ContentController::class, 'getContent']);
 Route::get('/images', [CatAppController::class, 'getImages']);
 Route::get('/cities/{lang}', [CityController::class, 'getCities']);
 Route::middleware('auth:sanctum')->post('/change-password', [AuthController::class, 'changePassword']);
+Route::post('/forgot-password', [AuthController::class, 'forgotPassword']);
+Route::post('/reset-password', [AuthController::class, 'resetPassword']);
+
 
 
